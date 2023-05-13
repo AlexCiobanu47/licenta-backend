@@ -31,7 +31,7 @@ const getAllLights = async (req, res) => {
   res.status(200).json(lights);
 };
 const getLatestLight = async (req, res) => {
-  const light = await Temperature.find({}).limit(1).sort({ createdAt: -1 });
+  const light = await Light.find({}).limit(1).sort({ createdAt: -1 });
   res.status(200).json(light);
 };
 const getAllGasConcentrations = async (req, res) => {
